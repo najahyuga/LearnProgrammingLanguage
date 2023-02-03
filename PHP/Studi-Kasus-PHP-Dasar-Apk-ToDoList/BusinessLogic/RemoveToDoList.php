@@ -4,17 +4,19 @@
  */
 function removeTodoList(int $number):bool
 {
-    global $todolist;
+    global $todoList;
 
-    if ($number > sizeof($todolist)) {
+    if($number > sizeof($todoList))
+    {
         return false;
     }
 
-    for ($i = $number; $i < sizeof($todolist) ; $i++) { 
-        $todolist[$i] = $todolist[$i + 1];
+    for ($i = $number; $i < sizeof($todoList); $i++) { 
+        # code...
+        $todoList[$i] = $todoList[$i + 1];
     }
 
-    unset($todolist[sizeof($todolist)]);
+    unset($todoList[sizeof($todoList)]);
 
     return true;
 }
