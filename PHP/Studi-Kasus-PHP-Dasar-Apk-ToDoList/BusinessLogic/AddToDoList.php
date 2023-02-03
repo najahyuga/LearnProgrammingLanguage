@@ -3,9 +3,9 @@
  * add Todo ke List
  */
 function addTodoList(string $todo){
-    global $todolist;
+    global $todoList;
 
-    $number = sizeof($todolist);
+    $number = sizeof($todoList);
 
-    $todolist[$number] = $todo;
+    $todoList[$number] = $todo;
 }
