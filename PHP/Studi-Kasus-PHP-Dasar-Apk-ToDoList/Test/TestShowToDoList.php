@@ -2,8 +2,8 @@
 require_once "../Model/ToDoList.php";
 require_once "../BusinessLogic/ShowToDoList.php";
 
-$todolist[1] = "Belajar PHP Dasar";;
-$todolist[2] = "Belajar Studi Kasus PHP Dasar";
-$todolist[3] = "Belajar PHP OOP";
+$todoList[1] = "Belajar PHP Dasar";;
+$todoList[2] = "Belajar Studi Kasus PHP Dasar";
+$todoList[3] = "Belajar PHP OOP";
 
 showTodoList();
