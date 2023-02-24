@@ -11,9 +11,15 @@ class Person{
 
     /**
      * Menambahkan function sayHello
+     * Menambahkan this keyword ($this->name "mengakses object di class Person"),
+     * sedangkan $name mengakses param di function
      */
-    function sayHello(string $name)
+    function sayHello(?string $name)
     {
-        echo "Hello $name" . PHP_EOL;
+        if (is_null($name)) {
+            echo "Hi, My name is $this->name" . PHP_EOL;
+        }else{
+            echo "Hi $name, My name is $this->name" . PHP_EOL;
+        }
     }
 }
