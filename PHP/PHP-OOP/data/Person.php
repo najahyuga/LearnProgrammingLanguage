@@ -7,4 +7,13 @@ class Person{
     var string $name;
     var ?string $address = null;//Properties dengan nullable properties dengan menambahkan tanda ?
     var string $country = "Indonesia";//Properties dengan default value
+
+
+    /**
+     * Menambahkan function sayHello
+     */
+    function sayHello(string $name)
+    {
+        echo "Hello $name" . PHP_EOL;
+    }
 }
