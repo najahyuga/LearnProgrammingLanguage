@@ -1,6 +1,9 @@
 <?php
 class Person{
 
+
+    const AUTHOR = "M Najah Yuga D";//constant
+    
     //Properties dengan kata kunci var
     //Properties dengan type declaration setelah kata kunci var, diikuti dengan tipe data
     
@@ -22,4 +25,19 @@ class Person{
             echo "Hi $name, My name is $this->name" . PHP_EOL;
         }
     }
+
+    /**
+     * self keyword
+     * untuk mengakses constant didalam class yang sama
+     */
+    function info()
+    {
+        echo "AUTHOR info: " . self::AUTHOR . PHP_EOL;
+    }
+
+    // public function __construct(string $name, ?string $address)
+    // {
+    //     $this->name = $name;
+    //     $this->address = $address;
+    // }
 }
