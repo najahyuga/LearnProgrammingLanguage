@@ -35,9 +35,14 @@ class Person{
         echo "AUTHOR info: " . self::AUTHOR . PHP_EOL;
     }
 
-    // public function __construct(string $name, ?string $address)
-    // {
-    //     $this->name = $name;
-    //     $this->address = $address;
-    // }
+    /**
+     * OOP Constructor adalah function yg akan dipanggil pertama kali saat object dibuat
+     * kata kunci __construct(bisa diberi param/argumen)
+     * tapi pada saat memanggilnya harus disertakan param/argumen berdasarkan __construct()
+     */
+    public function __construct(string $name, ?string $address)
+    {
+        $this->name = $name;
+        $this->address = $address;
+    }
 }
