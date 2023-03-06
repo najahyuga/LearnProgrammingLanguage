@@ -45,4 +45,15 @@ class Person{
         $this->name = $name;
         $this->address = $address;
     }
+
+    /**
+     * OOP Destructor adalah function yg akan dipanggil ketika object akan dihapus dari memory
+     * kebalikan dari Constructor
+     * kata kunci __destruct(tidak boleh diberi param/argumen)
+     */
+
+     function __destruct()
+     {
+        echo "Object person $this->name is destroyed" . PHP_EOL;
+     }
 }
