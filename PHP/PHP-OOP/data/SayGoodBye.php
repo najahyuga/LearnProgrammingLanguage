@@ -36,8 +36,37 @@ trait HasName
     public string $name;
 }
 
-// contoh penggunaan trait di class person
-class Person
+/**
+ * trait abstract function
+ */
+trait CanRun
 {
-    use SayGoodBye, SayHello, HasName;
+    public abstract function run():void;
+}
+
+class ParentPerson
+{
+    public function goodBye(?string $name): void
+    {
+        echo "Good Bye in Person" . PHP_EOL;   
+    }
+
+    public function sayHello(?string $name): void
+    {
+        echo "Hello in Person" . PHP_EOL;
+    }
+}
+
+// contoh penggunaan trait di class person
+class Person extends ParentPerson
+{
+    use SayGoodBye, SayHello, HasName, CanRun;
+
+    public function run(): void
+    {
+        //trait abstract function
+        echo "Person $this->name is running" . PHP_EOL;
+    }
+
+   
 }

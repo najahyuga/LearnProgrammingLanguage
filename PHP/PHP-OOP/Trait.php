@@ -9,3 +9,5 @@ $person->goodBye("Byee");
 $person->sayHello("Hello");
 $person->name = "Najah";
 var_dump($person);
+
+$person->run();
