@@ -44,6 +44,13 @@ trait CanRun
     public abstract function run():void;
 }
 
+
+/**
+ * Trait Overriding 
+ * apabila sebuah class memiliki parentclass yg memiliki function sama dengan function di trait
+ * maka secara otomatis akan trait akan mengoverride function tersebut
+ * namun jika membuat function yg sama pada classnya, maka akan mengoverride function di trait
+ */
 class ParentPerson
 {
     public function goodBye(?string $name): void
@@ -66,7 +73,5 @@ class Person extends ParentPerson
     {
         //trait abstract function
         echo "Person $this->name is running" . PHP_EOL;
-    }
-
-   
+    }  
 }
