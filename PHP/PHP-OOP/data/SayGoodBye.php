@@ -44,6 +44,15 @@ trait CanRun
     public abstract function run():void;
 }
 
+/**
+ * Trait Inheritance OOP
+ * Bisa memanggil trait lain dari trait
+ * sama seperti penggunaan trait di class
+ */
+trait All{
+    use SayGoodBye, SayHello, HasName, CanRun;
+}
+
 
 /**
  * Trait Overriding 
@@ -67,8 +76,8 @@ class ParentPerson
 // contoh penggunaan trait di class person
 class Person extends ParentPerson
 {
-    use SayGoodBye, SayHello, HasName, CanRun;
-
+    use All;
+    
     public function run(): void
     {
         //trait abstract function
